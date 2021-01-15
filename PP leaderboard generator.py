@@ -1,3 +1,4 @@
+# Takes me about 90 seconds to run the script
 import requests
 from collections import OrderedDict
 fhcb = requests.get('https://www.speedrun.com/api/v1/leaderboards/k6q44pmd/category/wkpomgw2?var-5lyjej9l=z194rwyl').json()["data"]["runs"]
@@ -53,10 +54,12 @@ def PP_Total(e):
    pp = pp
  return pp
  
-players = []
+playersdup = []
 for x in categorymaster:
  for y in categorymaster[x]:
-  players.append(y)
+  playersdup.append(y)
+
+players = list(dict.fromkeys(playersdup))
 
 master = {}
 for x in players:
