@@ -1,5 +1,4 @@
 import requests
-import pandas as pd
 from collections import OrderedDict
 fhcb = requests.get('https://www.speedrun.com/api/v1/leaderboards/k6q44pmd/category/wkpomgw2?var-5lyjej9l=z194rwyl').json()["data"]["runs"]
 missions = requests.get('https://www.speedrun.com/api/v1/leaderboards/k6q44pmd/category/7dgr41pk?var-789jpg3n=zqorp5pq').json()["data"]["runs"]
