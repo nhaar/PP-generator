@@ -71,3 +71,9 @@ finalmaster = OrderedDict(reversed(list(newmaster.items())))
 with open('PP.csv', 'w') as f:
     for key in finalmaster.keys():
         f.write("%s,%s\n"%(key,finalmaster[key]))
+# Bonus function: use it to get the maximum possible PP
+def maxPP():
+ ppmax = 0
+ for x in categorymaster:
+  ppmax += PP(1,len(categorymaster[x]))
+ return ppmax
